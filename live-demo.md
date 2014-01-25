@@ -13,7 +13,7 @@
 	* Main file to "start" the app
 	* Contains an initial function that sets up our top level events
   
-	```
+	```js
 	/*global jQuery */
 	var app = app || {};
 	
@@ -28,7 +28,7 @@
 		* After the page loads, what can the user do
 	* In this sample app, the main events are the links in the "sidebar"
 	
-	```
+	```js
 	/*global Backbone, jQuery, _ */
 	var app = app || {};
 	
@@ -57,7 +57,7 @@
 	
 	* In **/views/core.js**, in `initRouter`, add:
 	
-	```
+	```js
 	// Get the link
 	var pathname = evt.target.pathname;
 	
@@ -68,7 +68,7 @@
 * /routers/router.js
 	* Allows for connecting client-side events, tied to specific URLs, to actions and events.
 	
-	```
+	```js
 	/*global Backbone */
 	var app = app || {};
 	
@@ -105,7 +105,7 @@
 	* Set of models
 	* Allows you to hold a group of models and apply "array-like" functions to them
 	
-	```
+	```js
 	/*global Backbone */
 	var app = app || {};
 	
@@ -125,7 +125,7 @@
 * /models/post.js
 	* Contains data and logic for a specific object in the app
 	
-	```
+	```js
 	/*global Backbone */
 	var app = app || {};
 	
@@ -149,7 +149,7 @@
 	* The catchall route is matched and `app.router.go` is executed
 	* In **/routers/router.js**, `go`, update the collection URL and fetch from server
 	
-	```
+	```js
 	var url = '/';
 	
 	if ( !_.isNull( pathname ) ) {
@@ -165,7 +165,7 @@
 	* Because we want to keep logic related to the core view in the one file, we can set up a listener in the core view to trigger actions when the archive collection is reset
 	* In **/views/core.js**, add:
 	
-	```
+	```js
 	initialize : function() {
 		this.$posts = $( '#posts' );
 		this.listenTo( app.archive, 'reset', this.addAll );
@@ -176,7 +176,7 @@
 		* This caches the `#posts` element and sets up the listener
 	* On `reset`, `addAll` is executed. In **/views/core.js**, add:
 	
-	```
+	```js
 	addAll : function() {
 		this.$posts.html( '' );
 		app.archive.each( this.addOne, this );
@@ -190,7 +190,7 @@
 	
 * /views/post.js
 	
-	```
+	```js
 	/*global Backbone, jQuery, _, wp */
 	var app = app || {};
 	
