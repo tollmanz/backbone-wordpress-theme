@@ -49,7 +49,7 @@ routes: {
 },
 ```
 
-* A [discussion of this issue](thethemefoundry.com/blog/backbone-js-routers-collections/)
+* A [discussion of this issue](https://thethemefoundry.com/blog/backbone-js-routers-collections/)
 
 ### Plugin support
 
@@ -75,7 +75,7 @@ wp_footer();
 ob_end_clean();
 ```
 
-* A [full discussion of this issue](thethemefoundry.com/blog/backbone-js-collections-plugin-compatibility/)
+* A [full discussion of this issue](https://thethemefoundry.com/blog/backbone-js-collections-plugin-compatibility/)
 
 ## A Backbone.js WordPress Theme Bill of Rights
 
